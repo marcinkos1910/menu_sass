@@ -1,0 +1,30 @@
+@import "../utils/mixins";
+@import "../utils/functions";
+
+// nesting
+.ms-menu {
+    &__hamburger {
+        display: block;
+        @include mq(sm) {
+            display: none;
+        }
+
+
+
+    }
+
+    &__box {
+        display: flex;
+        justify-content: space-between;
+        max-width: toRem(1200);
+        margin: auto;
+    }
+
+    &__link {
+        font-family: 'Roboto Bold', sans-serif;
+    }
+
+    &__link--active {
+
+    }
+}

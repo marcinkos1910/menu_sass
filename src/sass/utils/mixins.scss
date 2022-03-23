@@ -1,0 +1,25 @@
+@use 'sass:map';
+@import '../variables';
+
+@mixin mq($breakpoint){
+    $bp-value: map.get($grid-breakpoints, $breakpoint);
+
+
+    
+    @if $bp-value==null {
+        @error 'Breakpoint #{$breakpoint} is undefined. Default value has 0px has been used.';        
+    }
+    
+
+    @media only screen and (min-width: $bp-value) {
+        @content;
+    }
+}
+
+@mixin font-face($family, $path) {
+    font-family: '#{$family}';
+    src: url('#{$path}.woff2') format('woff2'),
+         url('#{$path}.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;    
+}

@@ -1,13 +1,7 @@
 // .ms-menu {}
 // .ms-menu .ms-menu__humburger {}
 
-// nesting
-.ms-menu {
-    &__humburger {}
-
-    &__box {}
-
-    &__link {}
-
-    &__link--active {}
-}
+@import "common/normalize";
+@import "utils/mixins";
+@import "typography/fonts";
+@import "components/menu";
