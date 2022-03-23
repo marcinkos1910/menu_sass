@@ -4,10 +4,10 @@
 // nesting
 .ms-menu {
     &__humburger {}
-    
-    &__menu {}
 
     &__box {}
 
     &__link {}
+
+    &__link--active {}
 }
